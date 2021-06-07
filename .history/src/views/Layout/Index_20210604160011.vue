@@ -114,15 +114,10 @@ export default class Layout extends Vue {
         console.log(2);
     }
     public scrollToView(nodeId: string):void {
-        this.$route.query.id = String(Math.random())
         this.$el.querySelector(nodeId)?.scrollIntoView({
             behavior: "smooth",  // 平滑过渡
             block:    "start"  // 上边框与视窗顶部平齐。默认值
         })
-    }
-    mounted() {
-        console.log(this.$route.query);
-        
     }
 }
 </script>
@@ -131,7 +126,6 @@ export default class Layout extends Vue {
 .el-menu {
     height: calc(100vh - 16px);
     overflow: auto;
-    overflow-x: hidden;
 }
 .common {
     height: 400px;
@@ -139,6 +133,5 @@ export default class Layout extends Vue {
 .main-content {
     height: calc(100vh - 16px);
     overflow: auto;
-    overflow-x: hidden;
 }
 </style>

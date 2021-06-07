@@ -6,7 +6,7 @@
                     <i class="el-icon-menu"></i>
                 </span>
                 <el-dropdown-menu slot="dropdown">
-                    <el-dropdown-item>首页</el-dropdown-item>
+                    <el-dropdown-item @click="$router.push({path: '/layout',query: {id: '2222'}})">首页</el-dropdown-item>
                     <el-dropdown-item>vue中文文档</el-dropdown-item>
                     <el-dropdown-item>react文档</el-dropdown-item>
                     <el-dropdown-item>github <i class="el-icon-s-promotion"></i></el-dropdown-item>
@@ -23,7 +23,7 @@
             <div class="content-item">
                 <h3>css3相关</h3>
                 <div class="list">
-                    <div class="list-item" v-for="item in cssTab" :key="item.id" @click="$router.push({path: '/layout',query: {id: 222}})">{{item.label}}</div>
+                    <div class="list-item" v-for="item in cssTab" :key="item.id">{{item.label}}</div>
                 </div>
             </div>
             <div class="content-item">

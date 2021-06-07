@@ -1,17 +1,7 @@
 <template>
     <div class="home">
         <header>
-            <el-dropdown trigger="click" class="icon-show">
-                <span class="el-dropdown-link">
-                    <i class="el-icon-menu"></i>
-                </span>
-                <el-dropdown-menu slot="dropdown">
-                    <el-dropdown-item>首页</el-dropdown-item>
-                    <el-dropdown-item>vue中文文档</el-dropdown-item>
-                    <el-dropdown-item>react文档</el-dropdown-item>
-                    <el-dropdown-item>github <i class="el-icon-s-promotion"></i></el-dropdown-item>
-                </el-dropdown-menu>
-            </el-dropdown>
+            <i class="el-icon-menu icon-show"></i>
             <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect" class="menu-show">
                 <el-menu-item index="1">首页</el-menu-item>
                 <el-menu-item index="2">vue中文文档</el-menu-item>
@@ -23,7 +13,7 @@
             <div class="content-item">
                 <h3>css3相关</h3>
                 <div class="list">
-                    <div class="list-item" v-for="item in cssTab" :key="item.id" @click="$router.push({path: '/layout',query: {id: 222}})">{{item.label}}</div>
+                    <div class="list-item" v-for="item in cssTab" :key="item.id">{{item.label}}</div>
                 </div>
             </div>
             <div class="content-item">

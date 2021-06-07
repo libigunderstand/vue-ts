@@ -16,7 +16,7 @@
                     <el-submenu index="1">
                         <template slot="title">
                             <i class="el-icon-notebook-1"></i>
-                            <span @click="scrollToView('#e')">相关</span>
+                            <span>css相关</span>
                         </template>
                         <el-submenu index="1-1">
                             <template slot="title">css基础</template>
@@ -87,14 +87,14 @@
                     </el-submenu>
                 </el-menu>
             </el-aside>
-            <el-container class="main-content">
+            <el-container>
                 <el-main>
                     <div id="a" class="common">a</div>
-                    <div id="b" class="common">b</div>
-                    <div id="c" class="common">c</div>
-                    <div id="d" class="common">d</div>
-                    <div id="e" class="common">e</div>
-                    <div id="f" class="common">f</div>
+                    <div id="b">b</div>
+                    <div id="c">c</div>
+                    <div id="d">d</div>
+                    <div id="e">e</div>
+                    <div id="f">f</div>
                 </el-main>
             </el-container>
         </el-container>
@@ -113,32 +113,11 @@ export default class Layout extends Vue {
     public handleClose():void {
         console.log(2);
     }
-    public scrollToView(nodeId: string):void {
-        this.$route.query.id = String(Math.random())
-        this.$el.querySelector(nodeId)?.scrollIntoView({
-            behavior: "smooth",  // 平滑过渡
-            block:    "start"  // 上边框与视窗顶部平齐。默认值
-        })
-    }
-    mounted() {
-        console.log(this.$route.query);
-        
-    }
 }
 </script>
 
 <style scoped lang="less">
 .el-menu {
-    height: calc(100vh - 16px);
-    overflow: auto;
-    overflow-x: hidden;
-}
-.common {
-    height: 400px;
-}
-.main-content {
-    height: calc(100vh - 16px);
-    overflow: auto;
-    overflow-x: hidden;
+    min-height: calc(100vh - 16px);
 }
 </style>

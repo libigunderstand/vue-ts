@@ -87,7 +87,7 @@
                     </el-submenu>
                 </el-menu>
             </el-aside>
-            <el-container class="main-content">
+            <el-container>
                 <el-main>
                     <div id="a" class="common">a</div>
                     <div id="b" class="common">b</div>
@@ -114,15 +114,10 @@ export default class Layout extends Vue {
         console.log(2);
     }
     public scrollToView(nodeId: string):void {
-        this.$route.query.id = String(Math.random())
         this.$el.querySelector(nodeId)?.scrollIntoView({
             behavior: "smooth",  // 平滑过渡
             block:    "start"  // 上边框与视窗顶部平齐。默认值
         })
-    }
-    mounted() {
-        console.log(this.$route.query);
-        
     }
 }
 </script>
@@ -130,15 +125,8 @@ export default class Layout extends Vue {
 <style scoped lang="less">
 .el-menu {
     height: calc(100vh - 16px);
-    overflow: auto;
-    overflow-x: hidden;
 }
 .common {
     height: 400px;
-}
-.main-content {
-    height: calc(100vh - 16px);
-    overflow: auto;
-    overflow-x: hidden;
 }
 </style>

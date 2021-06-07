@@ -7,7 +7,6 @@ import {
   Menu,
   Submenu,
   MenuItem,
-  MenuItemGroup,
   Container,
   Aside,
   Header,
@@ -15,14 +14,12 @@ import {
   Footer,
   Dropdown,
   DropdownItem,
-  DropdownMenu,
-  Switch
+  DropdownMenu
 } from 'element-ui'
 
 Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
-Vue.use(MenuItemGroup)
 Vue.use(Container)
 Vue.use(Aside)
 Vue.use(Header)
@@ -31,7 +28,6 @@ Vue.use(Footer)
 Vue.use(Dropdown)
 Vue.use(DropdownItem)
 Vue.use(DropdownMenu)
-Vue.use(Switch)
 
 Vue.config.productionTip = false
 

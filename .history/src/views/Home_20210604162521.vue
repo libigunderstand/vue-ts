@@ -23,7 +23,7 @@
             <div class="content-item">
                 <h3>css3相关</h3>
                 <div class="list">
-                    <div class="list-item" v-for="item in cssTab" :key="item.id" @click="$router.push({path: '/layout',query: {id: 222}})">{{item.label}}</div>
+                    <div class="list-item" v-for="item in cssTab" :key="item.id" @click="$router.push({path: '/layout/:222'})">{{item.label}}</div>
                 </div>
             </div>
             <div class="content-item">

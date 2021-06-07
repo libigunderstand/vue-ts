@@ -7,31 +7,24 @@ import {
   Menu,
   Submenu,
   MenuItem,
-  MenuItemGroup,
   Container,
   Aside,
   Header,
   Main,
   Footer,
   Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  Switch
+  DropdownItem
 } from 'element-ui'
 
 Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
-Vue.use(MenuItemGroup)
 Vue.use(Container)
 Vue.use(Aside)
 Vue.use(Header)
 Vue.use(Main)
 Vue.use(Footer)
 Vue.use(Dropdown)
-Vue.use(DropdownItem)
-Vue.use(DropdownMenu)
-Vue.use(Switch)
 
 Vue.config.productionTip = false
 

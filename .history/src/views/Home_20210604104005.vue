@@ -6,10 +6,11 @@
                     <i class="el-icon-menu"></i>
                 </span>
                 <el-dropdown-menu slot="dropdown">
-                    <el-dropdown-item>首页</el-dropdown-item>
-                    <el-dropdown-item>vue中文文档</el-dropdown-item>
-                    <el-dropdown-item>react文档</el-dropdown-item>
-                    <el-dropdown-item>github <i class="el-icon-s-promotion"></i></el-dropdown-item>
+                    <el-dropdown-item icon="el-icon-plus">黄金糕</el-dropdown-item>
+                    <el-dropdown-item icon="el-icon-circle-plus">狮子头</el-dropdown-item>
+                    <el-dropdown-item icon="el-icon-circle-plus-outline">螺蛳粉</el-dropdown-item>
+                    <el-dropdown-item icon="el-icon-check">双皮奶</el-dropdown-item>
+                    <el-dropdown-item icon="el-icon-circle-check">蚵仔煎</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
             <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect" class="menu-show">
@@ -23,7 +24,7 @@
             <div class="content-item">
                 <h3>css3相关</h3>
                 <div class="list">
-                    <div class="list-item" v-for="item in cssTab" :key="item.id" @click="$router.push({path: '/layout',query: {id: 222}})">{{item.label}}</div>
+                    <div class="list-item" v-for="item in cssTab" :key="item.id">{{item.label}}</div>
                 </div>
             </div>
             <div class="content-item">

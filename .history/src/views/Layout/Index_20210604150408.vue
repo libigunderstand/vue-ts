@@ -3,7 +3,7 @@
         <el-container>
             <el-aside width="200px">
                 <el-menu
-                    default-active="1"
+                    default-active="2"
                     class="el-menu-vertical-demo"
                     :collapse="switchvalue"
                     :router="true"
@@ -16,7 +16,7 @@
                     <el-submenu index="1">
                         <template slot="title">
                             <i class="el-icon-notebook-1"></i>
-                            <span @click="scrollToView('#e')">相关</span>
+                            <span>css相关</span>
                         </template>
                         <el-submenu index="1-1">
                             <template slot="title">css基础</template>
@@ -67,35 +67,24 @@
                             <el-menu-item index="layout/1-4-1">选项1</el-menu-item>
                         </el-submenu>
                     </el-submenu>
-                    <el-submenu index="4">
-                        <template slot="title">
-                            <i class="el-icon-notebook-1"></i>
-                            <span>react相关</span>
-                        </template>
-                        <el-submenu index="4-1">
-                            <template slot="title">react基础</template>
-                            <el-menu-item index="layout/1-1-1">选项1</el-menu-item>
-                        </el-submenu>
-                        <el-submenu index="4-2">
-                            <template slot="title">react进阶</template>
-                            <el-menu-item index="layout/1-4-1">选项1</el-menu-item>
-                        </el-submenu>
-                        <el-submenu index="4-3">
-                            <template slot="title">react高级</template>
-                            <el-menu-item index="layout/1-4-1">选项1</el-menu-item>
-                        </el-submenu>
-                    </el-submenu>
+                    <el-menu-item index="2">
+                        <i class="el-icon-menu"></i>
+                        <span slot="title">导航二</span>
+                    </el-menu-item>
+                    <el-menu-item index="3" disabled>
+                        <i class="el-icon-document"></i>
+                        <span slot="title">导航三</span>
+                    </el-menu-item>
+                    <el-menu-item index="4">
+                        <i class="el-icon-setting"></i>
+                        <span slot="title">导航四</span>
+                    </el-menu-item>
                 </el-menu>
             </el-aside>
-            <el-container class="main-content">
-                <el-main>
-                    <div id="a" class="common">a</div>
-                    <div id="b" class="common">b</div>
-                    <div id="c" class="common">c</div>
-                    <div id="d" class="common">d</div>
-                    <div id="e" class="common">e</div>
-                    <div id="f" class="common">f</div>
-                </el-main>
+            <el-container>
+                <el-header>Header</el-header>
+                <el-main>Main</el-main>
+                <el-footer>Footer</el-footer>
             </el-container>
         </el-container>
     </div>
@@ -113,32 +102,11 @@ export default class Layout extends Vue {
     public handleClose():void {
         console.log(2);
     }
-    public scrollToView(nodeId: string):void {
-        this.$route.query.id = String(Math.random())
-        this.$el.querySelector(nodeId)?.scrollIntoView({
-            behavior: "smooth",  // 平滑过渡
-            block:    "start"  // 上边框与视窗顶部平齐。默认值
-        })
-    }
-    mounted() {
-        console.log(this.$route.query);
-        
-    }
 }
 </script>
 
 <style scoped lang="less">
 .el-menu {
-    height: calc(100vh - 16px);
-    overflow: auto;
-    overflow-x: hidden;
-}
-.common {
-    height: 400px;
-}
-.main-content {
-    height: calc(100vh - 16px);
-    overflow: auto;
-    overflow-x: hidden;
+    min-height: calc(100vh - 16px);
 }
 </style>

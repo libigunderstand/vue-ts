@@ -16,7 +16,8 @@ const routes: Array<RouteConfig> = [
   {
     path: '/layout',
     name: 'Layout',
-    component: (resolve) => require(['../views/Layout/Index.vue'], resolve)
+    component: (resolve) => require(['../views/Layout/Index.vue'], resolve),
+    props: true
   }
 ]
 

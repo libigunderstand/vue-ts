@@ -7,7 +7,6 @@ import {
   Menu,
   Submenu,
   MenuItem,
-  MenuItemGroup,
   Container,
   Aside,
   Header,
@@ -22,7 +21,6 @@ import {
 Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
-Vue.use(MenuItemGroup)
 Vue.use(Container)
 Vue.use(Aside)
 Vue.use(Header)
