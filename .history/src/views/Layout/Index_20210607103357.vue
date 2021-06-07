@@ -101,39 +101,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop, Watch, Emit } from "vue-property-decorator"
+import { Component, Vue, Prop } from "vue-property-decorator"
 
 @Component
 export default class Layout extends Vue {
     @Prop({
-        type: Number,
         default: 1,
         required: false
     })
     typeIdx = 2
 
     public switchvalue = false
-    private count = 2
-
-    @Watch('typeIdx', {
-        deep: true
-    })
-    public changeCount():void {
-        console.log(this.typeIdx);
-    }
-
-    public get computedcount():number {
-        return this.count
-    }
-    public set computedcount(value) {
-        this.count = value + 1
-    }
-
-    @Emit('')
-    private senddata() {
-        return '传递给父元素'
-    }
-
     public handleOpen():void {
         console.log(1);
     }
